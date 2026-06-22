@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Bush Minds Tours & Travel</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo1.jpeg" alt="Bush Minds Logo" class="logo-img" />
+        <span class="logo-text">Bush Minds <span class="logo-sub">Tours & Travel</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="contact.html" class="active nav-cta">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero contact-hero">
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="hero-eyebrow">Get In Touch</p>
+      <h1>Book Your Safari</h1>
+      <p>Tell us where you want to go. We'll take care of the rest.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container contact-layout">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <h2>Send Us a Message</h2>
+        <p>Fill in the form below and we'll get back to you within 24 hours with a custom itinerary proposal.</p>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" placeholder="Anthony" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" placeholder="Joshua" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="anthony@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+256 703 723 232" /> 
+          </div>
+          <div class="form-group">
+            <label for="destination">Destination of Interest</label>
+            <select id="destination" name="destination">
+              <option value="">— Select a destination —</option>
+              <option>Bwindi Impenetrable Forest (Gorilla Trekking)</option>
+              <option>Murchison Falls National Park</option>
+              <option>Queen Elizabeth National Park</option>
+              <option>Rwenzori Mountains</option>
+              <option>Sipi Falls & Mt. Elgon</option>
+              <option>Jinja – Source of the Nile</option>
+              <option>Multi-destination Uganda Safari</option>
+              <option>Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="travelers">Number of Travellers</label>
+              <input type="number" id="travelers" name="travelers" min="1" max="50" placeholder="2" />
+            </div>
+            <div class="form-group">
+              <label for="travel-date">Preferred Travel Date</label>
+              <input type="date" id="travel-date" name="travel-date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your dream trip *</label>
+            <textarea id="message" name="message" rows="5" placeholder="E.g. We're a family of 4 looking for a 7-day gorilla trekking and wildlife safari. Budget is flexible..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you! We've received your enquiry and will be in touch within 24 hours.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info-wrap">
+        <h2>Find Us</h2>
+
+        <div class="contact-info-item">
+          <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>Physical Address</h4>
+            <p>Nabweru South I, Nansana Division<br/>Nansana Municipality, Wakiso District<br/>Uganda</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>Email Us</h4>
+            <p><a href="mailto:bushminds@gmail.com">bushminds@gmail.com</a></p>
+            <p style="font-size:0.85rem; color:#888;">We respond within 24 hours</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <h4>WhatsApp Us</h4>
+            <p>Chat with us directly for quick responses and instant booking assistance.</p>
+            <a href="https://wa.me/256703723232" class="btn btn-whatsapp" target="_blank">
+              <i class="fab fa-whatsapp"></i> Open WhatsApp Chat
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <h4>Office Hours</h4>
+            <p>Monday – Friday: 8:00 AM – 6:00 PM<br/>Saturday: 9:00 AM – 3:00 PM<br/>Sunday: Emergency enquiries only</p>
+          </div>
+        </div>
+
+        <!-- LOGO DISPLAY -->
+        <div class="contact-logo-display">
+          <img src="images/logo1.jpeg" alt="Bush Minds" />
+          <p><em>"Bush is Home"</em></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo3.jpeg" alt="Bush Minds" class="footer-logo" />
+        <p>Bush Minds Tours & Travel<br/><em>"Bush is Home"</em></p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+         <p><a href="tel:+256703723232"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0703 723 232</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Nabweru South I, Nansana Division,<br/>Nansana Municipality, Wakiso District</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:bushminds@gmail.com">bushminds@gmail.com</a></p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bush Minds Tours & Travel. All rights reserved. | Wakiso, Uganda</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
