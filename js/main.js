@@ -53,7 +53,7 @@ document.querySelectorAll('.card, .why-card, .dest-card, .testi-card, .service-r
     btn.style.display = 'none';
     success.classList.add('show');
   }, 1200);
-}
+
 
 // ── ACTIVE NAV LINK ──
 (function() {
