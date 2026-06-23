@@ -42,10 +42,6 @@ document.querySelectorAll('.card, .why-card, .dest-card, .testi-card, .service-r
 });
 
 // ── CONTACT FORM HANDLER ──
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
 
   // Simulate sending (replace with real backend/EmailJS/Formspree)
   const btn = form.querySelector('button[type="submit"]');

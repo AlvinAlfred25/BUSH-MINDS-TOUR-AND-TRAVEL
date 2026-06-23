@@ -389,7 +389,7 @@ em { font-family: 'IM Fell English', serif; font-style: italic; }
   background-size: cover;
   background-position: center;
 }
-.bwindi { background-image: url('../images/bwindi-forest-1.jpg'); }
+.bwindi { background-image: url('../images/Gorilla-2.webp'); }
 .murchison { background-image: url('../images/murchison-falls-2.webp'); }
 .queen { background-image: url('../images/Queen\ Elizabeth-1.jpg'); }
 .dest-info { padding: 1.5rem; }
@@ -583,7 +583,7 @@ em { font-family: 'IM Fell English', serif; font-style: italic; }
   background-position: center;
   box-shadow: var(--shadow);
 }
-.bwindi-lg { background-image: url('../images/bwindi-forest-1.jpg'); }
+.bwindi-lg { background-image: url('../images/Gorilla-2.webp'); }
 .murchison-lg { background-image: url('../images/murchison-falls-2.webp'); }
 .queen-lg { background-image: url('../images/Queen\ Elizabeth-1.jpg'); }
 .rwenzori-lg { background-image: url('../images/Mountain\ Rwenzori-1.webp'); }
