@@ -41,18 +41,41 @@ document.querySelectorAll('.card, .why-card, .dest-card, .testi-card, .service-r
   observer.observe(el);
 });
 
-// ── CONTACT FORM HANDLER ──
 
-  // Simulate sending (replace with real backend/EmailJS/Formspree)
-  const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
+function handleSubmit(e) {
+  e.preventDefault();
+  const form    = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  const btn     = form.querySelector('button[type="submit"]');
 
-  setTimeout(() => {
-    form.reset();
-    btn.style.display = 'none';
-    success.classList.add('show');
-  }, 1200);
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  btn.disabled  = true;
+
+  const data = new FormData(form);
+
+  fetch('submit_enquiry.php', {
+    method: 'POST',
+    body: data
+  })
+  .then(res => res.json())
+  .then(response => {
+    if (response.status === 'success') {
+      form.reset();
+      btn.style.display = 'none';
+      success.classList.add('show');
+    } else {
+      btn.innerHTML = 'Send Enquiry <i class="fas fa-paper-plane"></i>';
+      btn.disabled  = false;
+      alert('Error: ' + response.message);
+    }
+  })
+  .catch(() => {
+    btn.innerHTML = 'Send Enquiry <i class="fas fa-paper-plane"></i>';
+    btn.disabled  = false;
+    alert('Something went wrong. Please try again.');
+  });
+}
+
 
 
 // ── ACTIVE NAV LINK ──

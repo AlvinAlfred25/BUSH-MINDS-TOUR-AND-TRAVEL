@@ -48,22 +48,9 @@
       <div class="contact-form-wrap">
         <h2>Send Us a Message</h2>
         <p>Fill in the form below and we'll get back to you within 24 hours with a custom itinerary proposal.</p>
-       <form
-  class="contact-form"
-  id="contactForm"
-  action="https://formspree.io/f/xrewgwyz"
-  method="POST"
->
-<input
-  type="hidden"
-  name="_subject"
-  value="New Bush Minds Safari Enquiry"
-/>
-<input
-  type="hidden"
-  name="_next"
-  value="https://yourdomain.com/thank-you.html"
-/>
+
+       <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)" method="POST">
+
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name *</label>
@@ -115,7 +102,8 @@
             <i class="fas fa-check-circle"></i>
             <p>Thank you! We've received your enquiry and will be in touch within 24 hours.</p>
           </div>
-        </form>
+         </form>
+       
       </div>
 
       <!-- CONTACT INFO -->
@@ -193,10 +181,9 @@
         <p><i class="fas fa-map-marker-alt"></i> Nabweru South I, Nansana Division,<br/>Nansana Municipality, Wakiso District</p>
         <p><i class="fas fa-envelope"></i> <a href="mailto:bushminds@gmail.com">bushminds@gmail.com</a></p>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        
           <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      
         </div>
       </div>
     </div>
@@ -205,31 +192,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script>
-const form = document.getElementById("contactForm");
-const success = document.getElementById("formSuccess");
-
-form.addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const data = new FormData(form);
-
-  const response = await fetch(form.action, {
-    method: "POST",
-    body: data,
-    headers: {
-      Accept: "application/json"
-    }
-  });
-
-  if (response.ok) {
-    success.style.display = "flex";
-    form.reset();
-  } else {
-    alert("Sorry, something went wrong. Please try again.");
-  }
-});
-</script>
+ <script src="js/main.js"></script>
 </body>
 </html>
